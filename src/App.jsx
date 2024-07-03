@@ -5,14 +5,13 @@ import Results from './Results'
 
 
 function App() {
-  const ACCESS_KEY = 'a04iyGi24MbuKU8hjgt4nvV1OO_ntZ-x0PMEfFPPIOU'
-  const API_URL = 'https://api.unsplash.com/search/photos/'
   const [keyword, setKeyword] = React.useState('')
   const [results, setResults] = React.useState([])
   const [page, setPage] = React.useState(1)
+
   
   const get = async () => {
-    let url = `${API_URL}?page=${page}&query=${keyword}&client_id=${ACCESS_KEY}` 
+    let url = `${import.meta.env.VITE_API}?page=${page}&query=${keyword}&client_id=${import.meta.env.VITE_REACT_APP_API_KEY}` 
     const response = await fetch(url)
     const rawData = await response.json()
     const res = rawData.results

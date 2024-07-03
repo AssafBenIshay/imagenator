@@ -27,7 +27,6 @@ export default function Results({ results, setPage, page }) {
     }
 
     function scrollUp() {
-        console.log(window.scrollY)
         window.scrollTo({
         top: 0,
         behavior: "smooth",
