@@ -1,0 +1,13 @@
+.card{
+    width:auto;
+    height:auto;
+    background-color: transparent;
+    object-fit: fill;
+    margin: auto;
+    
+
+}
+
+.card>img{
+    border-radius: 55px;
+}
