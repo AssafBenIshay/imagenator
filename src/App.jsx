@@ -11,7 +11,7 @@ function App() {
 
   
   const get = async () => {
-    let url = `${import.meta.env.VITE_API}?page=${page}&query=${keyword}&client_id=${import.meta.env.VITE_REACT_APP_API_KEY}` 
+    let url = `${'https://api.unsplash.com/search/photos/'}?page=${page}&query=${keyword}&client_id=${import.meta.env.VITE_REACT_APP_API_KEY}` 
     const response = await fetch(url)
     const rawData = await response.json()
     const res = rawData.results
