@@ -2,7 +2,6 @@ import React from 'react'
 import './App.css'
 import Header from './Header'
 import Results from './Results'
-import Card from './Card'
 
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
     const rawData = await response.json()
     const res = rawData.results
 
-    console.log('res', res)
     
     setResults(res)
   }
